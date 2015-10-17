@@ -1,0 +1,20 @@
+{
+  "name": "Trello-Desktop",
+  "version": "0.0.0",
+  "main": "index.html",
+  "scripts": {
+    "start": "sudo nwbuild --run ./"
+  },
+  "window": {
+    "title": "Trello Desktop",
+    "toolbar": false,
+    "frame": true,
+    "width": 1180,
+    "height": 755,
+    "min_width": 350,
+    "min_height": 710,
+    "resizable": true,
+    "position": "center",
+    "single-instance": true
+  }
+}
