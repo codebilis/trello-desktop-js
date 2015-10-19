@@ -1,0 +1,25 @@
+{
+  "name": "trello",
+  "description": "Trello Desktop",
+  "main": "index.js",
+  "authors": [
+    "Bu Kinoshita"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "trello",
+    "mac",
+    "desktop",
+    "to-do"
+  ],
+  "homepage": "https://github.com/trello-desktop/trello",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {}
+}

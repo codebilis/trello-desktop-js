@@ -1,0 +1,145 @@
+body {
+  font-family: 'Helvetica Neue';
+  font-size: 12px;
+  background-color: #045890;
+}
+
+.welcome {
+  color: white;
+  font-size: 100px;
+  margin-bottom: 50px;
+  margin-top: 100px;
+  font-weight: 100;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+$maximize: #24cc4c;
+$minimize: #fdbe3d;
+$close: #fd5b58;
+
+$maximize-border: #13af39;
+$minimize-border: #dea02e;
+$close-border: #df3f3f;
+
+.btn-system {
+  height: 11px;
+  width: 11px;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  display: inline-block;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.btn-system--maximize {
+  background-color: $maximize;
+  border-color: $maximize-border;
+}
+
+.btn-system--minimize {
+  background-color: $minimize;
+  border-color: $minimize-border;
+}
+
+.btn-system--close {
+  background-color: $close;
+  border-color: $close-border;
+}
+
+.btn {
+  background: #cdd2d4;
+  background: -webkit-linear-gradient(top, #cdd2d4 0, #c4c9cc 100%);
+  background: linear-gradient(to bottom, #cdd2d4 0, #c4c9cc 100%);
+  border-radius: .3em;
+  box-shadow: 0 2px 0 #4d4d4d;
+  color: #4d4d4d;
+  display: inline-block;
+  font-weight: bold;
+  margin-bottom: .8em;
+  padding: .6em 1.3em;
+  position: relative;
+  text-decoration: none;
+  border: 0;
+}
+
+.btn-green {
+  background: #61bd4f;
+  background: -webkit-linear-gradient(top, #61bd4f 0, #5aac44 100%);
+  background: linear-gradient(to bottom, #61bd4f 0, #5aac44 100%);
+  box-shadow: 0 2px 0 #3f6f21;
+  color: #fff;
+}
+
+#loggedout {
+  text-align: center;
+  font-size: 20px;
+  padding-top: 30px;
+}
+
+#loggedin { 
+  display: none; 
+}
+
+#header {
+  background: #026aa7;
+  height: 50px;
+  overflow: hidden;
+  padding: 5px;
+  position: relative;
+  z-index: 10;
+}
+
+#output {
+  padding: 4px;
+}
+
+.board-list {
+  margin-bottom: 1pc;
+  
+}
+
+.board { 
+  position: relative;
+  width: 33.333%;
+  float: left;
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 150px;
+}
+
+.board-content {
+  height: 150px;
+}
+
+.member {
+  background-color: #d6dadc;
+  border-radius: 3px;
+  color: #4d4d4d;
+  display: block;
+  float: left;
+  height: 30px;
+  margin: 0 4px 4px 0;
+  overflow: hidden;
+  position: relative;
+  width: 30px;
+  text-decoration: none;
+  user-select: none;
+  z-index: 0;
+}
+
+.member-avatar {
+  height: 30px;
+  width: 30px;
+}
+
+.masthead {
+  height: 30px;
+  background: #045890;
+  width: 100%;
+  padding: 9px 10px;
+}

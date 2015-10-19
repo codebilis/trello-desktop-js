@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+html(lang="en")
+head
+  meta(charset="UTF-8")
+  title Trello for Desktop
+
+  link(rel="stylesheet", href="./stylesheets/main.css")
+
+body
+  header.masthead(style="-webkit-app-region: drag")
+    button.btn-system.btn-system--close
+    button.btn-system.btn-system--minimize(onclick="minimize()")
+    button.btn-system.btn-system--maximize(onclick="maximize()")
+
+  div(id="loggedout")
+    h1.welcome Welcome to Trello!
+    a(id="connectLink" class="btn btn-green" href="#")
+      | Connect To Trello
+
+  div(id="loggedin")
+    div(id="header")
+      | Logged in to as
+      span(id="fullName")
+      
+      a(id="disconnect" href="#")
+        | Log Out
+
+      span(class="member")
+        img(id="avatar" class="member-avatar")
+    
+    div(id="output")
+
+    div(id="cards")
+
+  script(src="./bower_components/jquery/dist/jquery.min.js")
+  script(src="https://api.trello.com/1/client.js?key=d67abb3b29b5f94a2c746724cc988573")
+  script(src="./scripts/main.js")
