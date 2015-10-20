@@ -1,7 +1,6 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var plumber = require('gulp-plumber');
-var nw = require('gulp-nw-builder');
 var notify = require('gulp-notify');
 var autoprefixer = require('gulp-autoprefixer');
 var jade = require('gulp-jade');
@@ -16,10 +15,8 @@ var target = {
   stylesheets_src: './app/public/stylesheets/**/*.scss',
   stylesheets_dist: './dist/stylesheets',
 
-  scripts_src: './app/public/scripts/**/*.js',
+  scripts_src: './app/public/scripts/system/core.js',
   scripts_dist: './dist/scripts/',
-
-  angular_src: './app/public/scripts/main.js',
 
   build: './dist/*'
 }
@@ -71,13 +68,4 @@ gulp.task('default', ['views', 'stylesheets', 'scripts'], function() {
   gulp.watch(target.views_src, ['views']);
   gulp.watch(target.stylesheets_src, ['stylesheets']);
   gulp.watch(target.scripts_src, ['scripts']);
-});
-
-gulp.task('build', function() {
-  return gulp.src(target.build)
-    .pipe(plumber())
-    .pipe(nw({
-      version: 'v0.12.3',
-      platforms: ['linux32', 'linux64', 'osx64', 'win32']
-    }));
 });

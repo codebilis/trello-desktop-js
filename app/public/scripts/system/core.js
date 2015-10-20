@@ -1,26 +1,17 @@
-var gui = require('nw.gui');
-var fs = require('fs');
-var win = gui.Window.get();
+var app = require('app');
+var BrowserWindow = require('browser-window');
 
-// Debugger Mode
-win.showDevTools();
+var mainWindow = null;
 
-
-// Minimize App
-function minimize() {
-  win.minimize();
-};
-
-// Maximize App
-function maximize() {
-  win.maximize();
-};
-
-// Live Reload
-var path = './';
-
-fs.watch(path, function() {
-  if(location) {
-    location.reload();
-  }
+// When app is ready.
+app.on('ready', function() {
+  mainWindow = new BrowserWindow({
+    width: 1000,
+    height: 600,
+    center: true,
+    resizable: true,
+    'title-bar-style': 'hidden-inset'
+  });
+  
+  mainWindow.loadUrl('file://' + __dirname + '/../index.html');
 });
