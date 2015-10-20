@@ -21,14 +21,13 @@ $ npm start
 ## Want to help?
 Please read through our [contributing guidelines](). Included are directions for opening issues, coding standards, and notes on development.
 
+Editor preferences are available in the [editor config]() for easy use in common text editors. Read more and download plugins at [http://editorconfig.org](http://editorconfig.org).
+
 ## Creator
 **Bu Kinoshita**
 
 * <https://twitter.com/BuKinoshita>
 * <https://github.com/BuKinoshita>
-
-
-Editor preferences are available in the [editor config]() for easy use in common text editors. Read more and download plugins at [http://editorconfig.org](http://editorconfig.org).
 
 
 ## Copyright and license
