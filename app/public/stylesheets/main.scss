@@ -1,5 +1,43 @@
-body {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: 'Helvetica Neue';
+}
+
+body {
   font-size: 12px;
   background-color: #045890;
+}
+
+$white: #fff;
+
+.welcome {
+  padding-top: 175px;
+  text-align: center;
+}
+
+.welcome__title {
+  color: $white;
+  font-size: 75px;
+  font-weight: 100;
+}
+
+.welcome__btn {
+  border-radius: .3em;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: .8em;
+  padding: .6em 1.3em;
+  position: relative;
+  text-decoration: none;
+  border: 0;
+  cursor: pointer;
+  margin-top: 75px;
+  background: #61bd4f;
+  background: -webkit-linear-gradient(top, #61bd4f 0, #5aac44 100%);
+  background: linear-gradient(to bottom, #61bd4f 0, #5aac44 100%);
+  box-shadow: 0 2px 0 #3f6f21;
+  color: #fff;
 }
