@@ -2,7 +2,7 @@
   "name": "trello",
   "version": "0.0.1",
   "description": "Trello Desktop",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -13,8 +13,11 @@
   "keywords": [
     "trello",
     "mac",
+    "windows",
+    "linux",
     "desktop",
-    "to-do"
+    "to-do",
+    "electron"
   ],
   "author": "Bu Kinoshita",
   "license": "MIT",
