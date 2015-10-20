@@ -7,13 +7,22 @@ head
   link(rel="stylesheet", href="./stylesheets/main.css")
 
 body
-  main(
-    class="welcome"
-    role="main"
-  )
-    h1.welcome__title
-      | Welcome to Trello
+  #loggedout
+    main(
+      class="welcome"
+      role="main"
+    )
+      h1.welcome__title
+        | Welcome to Trello
 
-    button.welcome__btn
-      | Connect To Trello
+      button.welcome__btn#connectLink
+        | Connect To Trello
 
+  script(src="./bower_components/jquery/dist/jquery.min.js")
+  script(type='text/javascript').
+    try {
+      $ = jQuery = module.exports;
+    } catch(e) {}
+  
+  script(src="./scripts/trello.js")
+  script(src="./scripts/main.js")

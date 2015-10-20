@@ -2,9 +2,9 @@
   "name": "trello",
   "version": "0.0.1",
   "description": "Trello Desktop",
-  "main": "main.js",
+  "main": "core.js",
   "scripts": {
-    "start": "electron dist/scripts/main.js"
+    "start": "electron dist/scripts/core.js"
   },
   "repository": {
     "type": "git",

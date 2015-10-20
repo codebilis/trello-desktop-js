@@ -16,7 +16,10 @@ var target = {
   stylesheets_dist: './dist/stylesheets',
 
   scripts_src: './app/public/scripts/system/core.js',
+  scripts_src2: './app/public/scripts/main.js',
   scripts_dist: './dist/scripts/',
+
+  trello_src: './app/public/scripts/trello/trello.js',
 
   build: './dist/*'
 }
@@ -57,6 +60,17 @@ gulp.task('scripts', function() {
   return gulp.src(target.scripts_src)
     .pipe(plumber())
     .pipe(sourcemaps.init())
+    .pipe(concat('core.js'))
+    .pipe(uglify())
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest(target.scripts_dist))
+    .pipe(notify('aehOo Scripts!'))
+});
+
+gulp.task('scripts2', function() {
+  return gulp.src(target.scripts_src2)
+    .pipe(plumber())
+    .pipe(sourcemaps.init())
     .pipe(concat('main.js'))
     .pipe(uglify())
     .pipe(sourcemaps.write())
@@ -64,8 +78,21 @@ gulp.task('scripts', function() {
     .pipe(notify('aehOo Scripts!'))
 });
 
-gulp.task('default', ['views', 'stylesheets', 'scripts'], function() {
+gulp.task('trello', function() {
+  return gulp.src(target.trello_src)
+    .pipe(plumber())
+    .pipe(sourcemaps.init())
+    .pipe(concat('trello.js'))
+    .pipe(uglify())
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest(target.scripts_dist))
+    .pipe(notify('aehOo Trello!'))
+});
+
+
+gulp.task('default', ['views', 'stylesheets', 'scripts', 'scripts2', 'trello'], function() {
   gulp.watch(target.views_src, ['views']);
   gulp.watch(target.stylesheets_src, ['stylesheets']);
   gulp.watch(target.scripts_src, ['scripts']);
+  gulp.watch(target.scripts2_src, ['scripts2']);
 });
